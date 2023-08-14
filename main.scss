@@ -1,0 +1,569 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+$main-font: 'Playfair Display', serif;
+$second-font: 'Lato', sans-serif;
+
+body {
+    margin: 0;
+}
+
+.wrapper {}
+
+.head {
+    width: 2560px;
+    height: 1024px;
+    flex-shrink: 0;
+    background-image: url(images/png/Frame1361.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.banner {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: #8B4513;
+    padding-right: 0px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+
+    &_text {
+        flex: 1 0 0;
+        color: white;
+        text-align: center;
+        font-family: $second-font;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+    }
+
+    &_buton {
+        background-color: rgb(139, 69, 19, 0);
+        border: 0px;
+        padding-right: 16px;
+
+        &_image {
+            width: 30px;
+            height: 30px;
+            flex-shrink: 0;
+        }
+    }
+}
+
+.header {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 40px;
+
+    &_logo {
+        color: #FFF;
+        font-family: $main-font;
+        font-size: 55px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+
+        &-brown {
+            color: #8B4513;
+            font-family: $main-font;
+            font-size: 55px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 130%;
+        }
+    }
+
+    &_link {
+        display: flex;
+        align-items: flex-start;
+        gap: 32px;
+
+        &-item {
+            color: #FFF;
+            font-family: $second-font;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-decoration: none;
+        }
+    }
+
+    &_right {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+
+        &-search {
+            display: flex;
+            width: 250px;
+            padding: 10px 10px 10px 28px;
+            align-items: flex-start;
+            gap: 8px;
+            position: relative;
+            font-family: $second-font;
+            font-size: 16px;
+            color: #B6B6B6;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+            &-icon {
+                width: 20px;
+                height: 20px;
+                flex-shrink: 0;
+                position: absolute;
+                right: 323px;
+            }
+
+        }
+
+
+        &-icon-item {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+    }
+}
+
+.product-frame-top {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    gap: 35px;
+    position: absolute;
+    left: 1825px;
+    top: 400px;
+
+    &_image {
+        width: 250px;
+        height: 250px;
+    }
+
+    &_text {
+        display: flex;
+        flex-direction: column;
+        padding: 32px 32px 32px 0px;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-self: stretch;
+
+        &-name {
+            width: 360px;
+            color: #3E3E3E;
+            font-family: $main-font;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 40px;
+        }
+
+        &-price {
+            width: 360px;
+            color: #757575;
+            font-family: $second-font;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        &-link {
+            color: #3E3E3E;
+            font-family: $second-font;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 1.8px;
+            text-decoration: none;
+            border-bottom: 1px solid #3E3E3E;
+            padding-bottom: 3px;
+        }
+    }
+}
+
+.product-frame-bottom {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    gap: 35px;
+    position: absolute;
+    left: 1400px;
+    top: 700px;
+
+    &_image {
+        width: 250px;
+        height: 250px;
+    }
+
+    &_text {
+        display: flex;
+        flex-direction: column;
+        padding: 32px 0px 32px 32px;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-self: stretch;
+
+        &-name {
+            width: 360px;
+            color: #3E3E3E;
+            font-family: $main-font;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 40px;
+        }
+
+        &-price {
+            width: 360px;
+            color: #757575;
+            font-family: $second-font;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        &-link {
+            color: #3E3E3E;
+            font-family: $second-font;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 2.8px;
+            text-decoration: none;
+            border-bottom: 1px solid #3E3E3E;
+            padding-bottom: 3px;
+        }
+    }
+}
+
+.main {
+    margin: 75px;
+}
+
+.picture {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+
+
+
+    &_left {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        &-item {
+
+            &-woman {
+
+                width: 1200px;
+                height: 750px;
+            }
+
+            &-men {
+                width: 1200px;
+                height: 750px;
+            }
+        }
+
+        &-woman {
+            position: absolute;
+            left: 140px;
+            top: 1450px;
+            color: #FFF;
+            font-family: $main-font;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 130%;
+            text-transform: uppercase;
+        }
+
+        &-men {
+            position: absolute;
+            left: 140px;
+            top: 2250px;
+            color: #FFF;
+            font-family: $main-font;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 130%;
+            text-transform: uppercase;
+        }
+    }
+
+    &_right {
+
+        &-image {
+            width: 1200px;
+            height: 1535px;
+        }
+
+        &-casual {
+            position: absolute;
+            left: 1350px;
+            top: 1830px;
+            color: #FFF;
+            font-family: $main-font;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 130%;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+
+    &_reg {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+
+
+    &_title {
+        color: #3E3E3E;
+        font-family: $main-font;
+        font-size: 140px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+    }
+
+    &_regtangle {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-self: stretch;
+        position: relative;
+
+        &-image {
+            width: 410px;
+            height: 550px;
+        }
+
+        &-category {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+            margin-top: 15px;
+            font-family: $main-font;
+            font-size: px;
+
+        }
+
+        &-name {
+            color: #3E3E3E;
+            font-family: $main-font;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 36px;
+            text-transform: capitalize;
+            margin-top: 15px;
+        }
+
+        &-price {
+            color: #757575;
+            font-family: $second-font;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 10px;
+        }
+
+        &-point {
+            position: absolute;
+            background-color: #8B4513;
+            display: flex;
+            padding: 4px 8px;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            position: absolute;
+            left: 325px;
+            top: 5px;
+            border-radius: 10px;
+
+            &-star {
+                width: 16px;
+                height: 16px;
+
+            }
+
+            &-number {
+                color: #FFF;
+                font-family: $second-font;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+        }
+    }
+}
+
+.seemore {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+
+
+
+    &_buton {
+        color: #FFF;
+        font-family: Lato;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2.4px;
+        text-transform: uppercase;
+        background-color: #8B4513;
+        border: 0;
+        padding: 12px 40px 12px 24px;
+    }
+
+    &_arrow {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 165px;
+
+
+    }
+}
+
+.experience {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    margin: 75px 0px;
+
+    &_column{
+        flex-direction: column;
+    }
+}
+
+.paragraph {
+    background: #F2F2F2;;
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
+    width: 950px;
+
+    &_white {
+        background-color: white;
+        display: flex;
+        padding: 100px 24px;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        flex: 1 0 0;
+        align-self: stretch;
+        justify-content: space-around;
+
+        &-icon {
+            background-color: #8B4513;
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            display: flex;
+            width: 100px;
+            height: 100px;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+
+        }
+    }
+
+    &_white2 {
+        background-color: white;
+        display: flex;
+        padding: 24px;
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+        flex: 1 0 0;
+        align-self: stretch;
+        justify-content: space-around;
+        
+
+
+        &-icon {
+            background-color: #8B4513;
+            flex-shrink: 0;
+            display: flex;
+            width: 100px;
+            height: 100px;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+
+        }
+    }
+    &_detail {
+        display: flex;
+        flex-direction: column;
+        padding: 0 30px;
+
+        &-title {
+            color: #3E3E3E;
+            text-align: center;
+            font-family: $main-font;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 36px;
+        }
+
+        &-text {
+            color: #757575;
+            font-family: $second-font;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 135%;
+
+        }
+    }
+
+  
+}

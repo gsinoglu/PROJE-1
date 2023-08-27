@@ -11,7 +11,9 @@ body {
     margin: 0;
 }
 
-.wrapper {}
+.wrapper {
+   margin: 0; 
+}
 
 .head {
     width: 2560px;
@@ -20,7 +22,6 @@ body {
     background-image: url(images/png/Frame1361.png);
     background-size: cover;
     background-repeat: no-repeat;
-
 }
 
 .banner {
@@ -65,6 +66,7 @@ body {
     align-items: center;
     margin: 20px 40px;
 
+
     &_logo {
         color: #FFF;
         font-family: $main-font;
@@ -72,6 +74,8 @@ body {
         font-style: normal;
         font-weight: 500;
         line-height: 130%;
+
+
 
         &-brown {
             color: #8B4513;
@@ -99,6 +103,11 @@ body {
         }
     }
 
+    .header_link-item:hover{
+        background-color:white;
+        color: #8B4513;
+    }
+
     &_right {
         display: flex;
         flex-direction: row;
@@ -124,7 +133,7 @@ body {
                 height: 20px;
                 flex-shrink: 0;
                 position: absolute;
-                right: 323px;
+                right: 300px;
             }
 
         }
@@ -138,6 +147,10 @@ body {
 
     }
 }
+.header_right-search:focus{
+    border: 3px solid #8B4513;
+    outline: none;
+}
 
 .product-frame-top {
     display: flex;
@@ -147,6 +160,7 @@ body {
     position: absolute;
     left: 1825px;
     top: 400px;
+
 
     &_image {
         width: 250px;
@@ -443,7 +457,7 @@ body {
 
     &_buton {
         color: #FFF;
-        font-family: Lato;
+        font-family: $second-font;
         font-size: 24px;
         font-style: normal;
         font-weight: 400;
@@ -453,6 +467,7 @@ body {
         background-color: #8B4513;
         border: 0;
         padding: 12px 40px 12px 24px;
+
     }
 
     &_arrow {
@@ -471,13 +486,14 @@ body {
     gap: 35px;
     margin: 75px 0px;
 
-    &_column{
+    &_column {
         flex-direction: column;
     }
 }
 
 .paragraph {
-    background: #F2F2F2;;
+    background: #F2F2F2;
+    ;
     display: flex;
     padding: 24px;
     flex-direction: column;
@@ -523,7 +539,7 @@ body {
         flex: 1 0 0;
         align-self: stretch;
         justify-content: space-around;
-        
+
 
 
         &-icon {
@@ -539,6 +555,7 @@ body {
 
         }
     }
+
     &_detail {
         display: flex;
         flex-direction: column;
@@ -561,9 +578,126 @@ body {
             font-style: normal;
             font-weight: 400;
             line-height: 135%;
+        }
+    }
+}
+
+.footer {
+    width: 2560px;
+    height: 500px;
+    background: #8B4513;
+    display: flex;
+    flex-direction: column;
+    padding: 75px 100px 20px;
+    justify-content: center;
+    gap: 100px;
+
+    &_top {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 175px;
+    }
+
+    &_bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+
+        &-item {
+            color: #FFF;
+            text-align: center;
+            font-family: $second-font;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 100;
+            line-height: 135%;
 
         }
     }
+}
 
-  
+.contact {
+    display: flex;
+    flex-direction: column;
+
+    &_detail {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+        &-name {
+            display: flex;
+            flex-direction: column;
+
+            &-item {
+                color: #FFF;
+                font-family: $second-font;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 135%;
+            }
+        }
+
+        &-desc {
+            display: flex;
+            flex-direction: column;
+
+            &-item {
+                color: #FFF;
+                font-family: $second-font;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 135%;
+            }
+        }
+    }
+}
+
+.menu-bar {
+    display: flex;
+    flex-direction: row;
+
+    :first-child {
+        padding-left: 0px;
+    }
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    gap: 5px;
+    
+
+    :first-child {
+        padding-bottom: 10px;
+    }
+
+    padding-left: 30px;
+
+
+    &_header {
+        color: #FFF;
+        font-family: $second-font;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 135%;
+        text-decoration: none;
+    }
+
+    &_item {
+        color: #FFF;
+        font-family: $second-font;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 135%;
+        text-decoration: none;
+
+    }
 }

@@ -12,7 +12,7 @@ body {
 }
 
 .wrapper {
-   margin: 0; 
+    margin: 0;
 }
 
 .head {
@@ -22,6 +22,13 @@ body {
     background-image: url(images/png/Frame1361.png);
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
+
+    @media screen and (max-width:380px) {
+        width: 375px;
+        height: 550px;
+        background-image: url(images/jpg/7b8898aabfd20ba4cce7738f6423baa8.jpg);
+    }
 }
 
 .banner {
@@ -34,6 +41,8 @@ body {
     align-items: center;
     flex-shrink: 0;
 
+
+
     &_text {
         flex: 1 0 0;
         color: white;
@@ -43,6 +52,13 @@ body {
         font-style: normal;
         font-weight: 400;
         line-height: 16px;
+
+        @media screen and (max-width:380px) {
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 200;
+            line-height: 12px;
+        }
     }
 
     &_buton {
@@ -54,6 +70,11 @@ body {
             width: 30px;
             height: 30px;
             flex-shrink: 0;
+
+            @media screen and (max-width:380px) {
+                width: 20px;
+                height: 20px;
+            }
         }
     }
 }
@@ -92,6 +113,10 @@ body {
         align-items: flex-start;
         gap: 32px;
 
+        @media screen and (max-width:380px) {
+            display: none;
+        }
+
         &-item {
             color: #FFF;
             font-family: $second-font;
@@ -103,8 +128,8 @@ body {
         }
     }
 
-    .header_link-item:hover{
-        background-color:white;
+    .header_link-item:hover {
+        background-color: white;
         color: #8B4513;
     }
 
@@ -113,6 +138,10 @@ body {
         flex-direction: row;
         align-items: center;
         gap: 10px;
+
+        @media screen and (max-width:380px) {
+            display: none;
+        }
 
         &-search {
             display: flex;
@@ -147,7 +176,8 @@ body {
 
     }
 }
-.header_right-search:focus{
+
+.header_right-search:focus {
     border: 3px solid #8B4513;
     outline: none;
 }
@@ -160,6 +190,10 @@ body {
     position: absolute;
     left: 1825px;
     top: 400px;
+
+    @media screen and (max-width:380px) {
+        display: none;
+    }
 
 
     &_image {
@@ -219,6 +253,10 @@ body {
     left: 1400px;
     top: 700px;
 
+    @media screen and (max-width:380px) {
+        display: none;
+    }
+
     &_image {
         width: 250px;
         height: 250px;
@@ -267,8 +305,59 @@ body {
     }
 }
 
+.scroll {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    position: absolute;
+    bottom: 10px;
+    align-items: center;
+    right: 1180px;
+
+    @media screen and (max-width:380px) {
+        bottom: 10px;
+        right: 70px;
+        gap: 5px;
+    }
+
+    &_text {
+        font-family: $second-font;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+        text-transform: uppercase;
+        color: #FFF;
+        right: 1180px;
+
+        @media screen and (max-width:380px) {
+            font-size: 20px;
+            font-weight: 200px;
+        }
+    }
+
+    &_buton {
+        background-color: rgb(255, 255, 255, 0);
+        border: none;
+
+        &-image {
+            width: 30px;
+            height: 30px;
+
+            @media screen and (max-width:380px) {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
+
 .main {
     margin: 75px;
+
+    @media screen and (max-width:380px) {
+        margin: 50px 15px;
+    }
 }
 
 .picture {
@@ -277,6 +366,10 @@ body {
     width: 100%;
     gap: 20px;
 
+    @media screen and (max-width:380px) {
+        flex-direction: column;
+    }
+
 
 
     &_left {
@@ -284,17 +377,30 @@ body {
         flex-direction: column;
         gap: 30px;
 
+        @media screen and (max-width:380px) {
+            gap: 20px;
+        }
+
         &-item {
 
             &-woman {
-
                 width: 1200px;
                 height: 750px;
+
+                @media screen and (max-width:380px) {
+                    width: 350px;
+                    height: 275px;
+                }
             }
 
             &-men {
                 width: 1200px;
                 height: 750px;
+
+                @media screen and (max-width:380px) {
+                    width: 350px;
+                    height: 275px;
+                }
             }
         }
 
@@ -309,6 +415,13 @@ body {
             font-weight: 500;
             line-height: 130%;
             text-transform: uppercase;
+
+            @media screen and (max-width:380px) {
+                left: 35px;
+                top: 650px;
+                font-size: 30px;
+            }
+
         }
 
         &-men {
@@ -322,6 +435,12 @@ body {
             font-weight: 500;
             line-height: 130%;
             text-transform: uppercase;
+
+            @media screen and (max-width:380px) {
+                left: 35px;
+                top: 930px;
+                font-size: 30px;
+            }
         }
     }
 
@@ -330,6 +449,11 @@ body {
         &-image {
             width: 1200px;
             height: 1535px;
+
+            @media screen and (max-width:380px) {
+                width: 350px;
+                height: 300px;
+            }
         }
 
         &-casual {
@@ -343,6 +467,12 @@ body {
             font-weight: 500;
             line-height: 130%;
             text-transform: uppercase;
+
+            @media screen and (max-width:380px) {
+                left: 35px;
+                top: 1200px;
+                font-size: 30px;
+            }
         }
     }
 }
@@ -356,6 +486,10 @@ body {
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 50px;
+
+        @media screen and (max-width:380px) {
+            gap: 15px;
+        }
     }
 
 
@@ -368,6 +502,10 @@ body {
         line-height: 130%;
         text-transform: uppercase;
         margin-bottom: 50px;
+
+        @media screen and (max-width:380px) {
+            font-size: 45px;
+        }
     }
 
     &_regtangle {
@@ -377,9 +515,17 @@ body {
         align-self: stretch;
         position: relative;
 
+
+
         &-image {
             width: 410px;
             height: 550px;
+
+            @media screen and (max-width:380px) {
+                width: 275px;
+                height: 350px;
+                gap: 10px;
+            }
         }
 
         &-category {
@@ -426,6 +572,11 @@ body {
             left: 325px;
             top: 5px;
             border-radius: 10px;
+
+            @media screen and (max-width:380px) {
+                left: 15px;
+                top: 5px;
+            }
 
             &-star {
                 width: 16px;
@@ -486,6 +637,11 @@ body {
     gap: 35px;
     margin: 75px 0px;
 
+    @media screen and (max-width:380px) {
+        flex-direction: column;
+        gap: 0;
+    }
+
     &_column {
         flex-direction: column;
     }
@@ -502,6 +658,11 @@ body {
     align-self: stretch;
     width: 950px;
 
+    @media screen and (max-width:380px) {
+        width: 350px;
+        margin-bottom: 25px;
+    }
+
     &_white {
         background-color: white;
         display: flex;
@@ -512,6 +673,10 @@ body {
         flex: 1 0 0;
         align-self: stretch;
         justify-content: space-around;
+
+        @media screen and (max-width:380px) {
+            padding: 24px;
+        }
 
         &-icon {
             background-color: #8B4513;
@@ -525,6 +690,7 @@ body {
             justify-content: center;
             align-items: center;
             border-radius: 50px;
+
 
         }
     }
@@ -540,7 +706,9 @@ body {
         align-self: stretch;
         justify-content: space-around;
 
-
+        @media screen and (max-width:380px) {
+            flex-direction: column;
+        }
 
         &-icon {
             background-color: #8B4513;
@@ -569,6 +737,11 @@ body {
             font-style: normal;
             font-weight: 400;
             line-height: 36px;
+
+            @media screen and (max-width:380px) {
+                font-size: 25px;
+            }
+
         }
 
         &-text {
@@ -578,6 +751,10 @@ body {
             font-style: normal;
             font-weight: 400;
             line-height: 135%;
+
+            @media screen and (max-width:380px) {
+                font-size: 14px;
+            }
         }
     }
 }
@@ -592,11 +769,22 @@ body {
     justify-content: center;
     gap: 100px;
 
+    @media screen and (max-width:380px) {
+        width: 375px;
+        height: 950px;
+        padding: 5px 50px 20px;
+    }
+
     &_top {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         gap: 175px;
+
+        @media screen and (max-width:380px) {
+            flex-direction: column;
+            gap: 35px;
+        }
     }
 
     &_bottom {
@@ -614,6 +802,9 @@ body {
             font-weight: 100;
             line-height: 135%;
 
+            @media screen and (max-width:380px) {
+                font-size: 10px;
+            }
         }
     }
 }
@@ -626,6 +817,9 @@ body {
         display: flex;
         flex-direction: row;
         gap: 20px;
+        @media screen and (max-width:380px) {
+            padding-top: 10px;
+        }
 
         &-name {
             display: flex;
@@ -638,6 +832,10 @@ body {
                 font-style: normal;
                 font-weight: 400;
                 line-height: 135%;
+
+                @media screen and (max-width:380px) {
+                    font-size: 12px;
+                }
             }
         }
 
@@ -652,6 +850,10 @@ body {
                 font-style: normal;
                 font-weight: 300;
                 line-height: 135%;
+
+                @media screen and (max-width:380px) {
+                    font-size: 10px;
+                }
             }
         }
     }
@@ -664,6 +866,10 @@ body {
     :first-child {
         padding-left: 0px;
     }
+
+    @media screen and (max-width:380px) {
+        flex-direction: column;
+    }
 }
 
 .menu {
@@ -671,14 +877,16 @@ body {
     flex-direction: column;
     align-self: stretch;
     gap: 5px;
-    
+    padding-left: 30px;
 
     :first-child {
         padding-bottom: 10px;
     }
 
-    padding-left: 30px;
-
+    @media screen and (max-width:380px) {
+        padding-left: 0px;
+        padding-top: 30px;
+    }
 
     &_header {
         color: #FFF;
@@ -688,6 +896,9 @@ body {
         font-weight: 700;
         line-height: 135%;
         text-decoration: none;
+        @media screen and (max-width:380px) {
+            font-size: 16px;
+        }
     }
 
     &_item {
@@ -698,6 +909,8 @@ body {
         font-weight: 300;
         line-height: 135%;
         text-decoration: none;
-
+        @media screen and (max-width:380px) {
+            font-size: 14px;
+        }
     }
 }

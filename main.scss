@@ -162,7 +162,7 @@ body {
                 height: 20px;
                 flex-shrink: 0;
                 position: absolute;
-                right: 300px;
+                right: 320px;
             }
 
         }
@@ -418,7 +418,7 @@ body {
 
             @media screen and (max-width:380px) {
                 left: 35px;
-                top: 650px;
+                top: 625px;
                 font-size: 30px;
             }
 
@@ -470,7 +470,7 @@ body {
 
             @media screen and (max-width:380px) {
                 left: 35px;
-                top: 1200px;
+                top: 1225px;
                 font-size: 30px;
             }
         }
@@ -630,6 +630,11 @@ body {
 
     }
 }
+
+.seemore_buton:hover{
+    background-color:#411d04
+}
+
 
 .experience {
     display: flex;

@@ -79,6 +79,25 @@ body {
     }
 }
 
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+
+    &:target {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
 .header {
 
     display: flex;
@@ -160,7 +179,9 @@ body {
     }
 }
 
-
+#check:checked~.banner {
+    right: 0;
+}
 
 
 
@@ -193,7 +214,7 @@ body {
     display: inline-block;
     text-decoration: none;
     font-family: $second-font;
-    color:#ffffff;
+    color: #ffffff;
     text-align: center;
     transition: 0.15s ease-in-out;
     position: relative;
@@ -271,7 +292,10 @@ body {
 
 
 @media screen and (max-width: 375px) {
-    .nav-bar{ gap: 100px;}
+    .nav-bar {
+        gap: 100px;
+    }
+
     .menu {
         flex-direction: column;
         align-items: center;
@@ -281,11 +305,11 @@ body {
         top: 0;
         right: -100%;
         z-index: 100;
-        background-color:  #8B4513;
+        background-color: #8B4513;
         transition: all 0.2s ease-in-out;
         text-align: center;
         padding-bottom: 50px;
-       
+
     }
 
     .menu li {
@@ -325,7 +349,7 @@ body {
         font-style: normal;
         font-weight: 500;
         line-height: 130%;
-    
+
         &-brown {
             color: #8B4513;
             font-family: $second-font;
@@ -795,8 +819,8 @@ body {
     }
 }
 
-.seemore_buton:hover{
-    background-color:#411d04
+.seemore_buton:hover {
+    background-color: #411d04
 }
 
 
@@ -938,6 +962,64 @@ body {
     justify-content: center;
     gap: 100px;
 
+    &_menu-bar {
+        display: flex;
+        flex-direction: row;
+
+        :first-child {
+            padding-left: 0px;
+        }
+
+        @media screen and (max-width:375px) {
+            flex-direction: column;
+        }
+    }
+
+    &_menu {
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        gap: 5px;
+        padding-left: 30px;
+
+        :first-child {
+            padding-bottom: 10px;
+        }
+
+        @media screen and (max-width:375px) {
+            padding-left: 0px;
+            padding-top: 30px;
+        }
+
+        &-header {
+            color: #FFF;
+            font-family: $second-font;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 135%;
+            text-decoration: none;
+
+            @media screen and (max-width:375px) {
+                font-size: 16px;
+            }
+        }
+
+        &-item {
+            color: #FFF;
+            font-family: $second-font;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 135%;
+            text-decoration: none;
+
+            @media screen and (max-width:375px) {
+                font-size: 14px;
+            }
+        }
+    }
+
     @media screen and (max-width:375px) {
         width: 375px;
         height: 950px;
@@ -975,63 +1057,10 @@ body {
                 font-size: 10px;
             }
         }
+
     }
 
-    &_menu-bar {
-        display: flex;
-        flex-direction: row;
-    
-        :first-child {
-            padding-left: 0px;
-        }
-    
-        @media screen and (max-width:375px) {
-            flex-direction: column;
-        }
-    }
-    
-    &_menu {
-        display: flex;
-        flex-direction: column;
-        align-self: stretch;
-        gap: 5px;
-        padding-left: 30px;
-    
-        :first-child {
-            padding-bottom: 10px;
-        }
-    
-        @media screen and (max-width:375px) {
-            padding-left: 0px;
-            padding-top: 30px;
-        }
-    
-        &-header {
-            color: #FFF;
-            font-family: $second-font;
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 135%;
-            text-decoration: none;
-            @media screen and (max-width:375px) {
-                font-size: 16px;
-            }
-        }
-    
-        &-item {
-            color: #FFF;
-            font-family: $second-font;
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: 135%;
-            text-decoration: none;
-            @media screen and (max-width:375px) {
-                font-size: 14px;
-            }
-        }
-    }
+
 
     &_logo {
         color: #FFF;
@@ -1040,56 +1069,56 @@ body {
         font-style: normal;
         font-weight: 500;
         line-height: 130%;
-}
+    }
 
-.contact {
-    display: flex;
-    flex-direction: column;
-
-    &_detail {
+    .contact {
         display: flex;
-        flex-direction: row;
-        gap: 20px;
-        @media screen and (max-width:375px) {
-            padding-top: 10px;
-        }
+        flex-direction: column;
 
-        &-name {
+        &_detail {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            gap: 20px;
 
-            &-item {
-                color: #FFF;
-                font-family: $second-font;
-                font-size: 24px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 135%;
+            @media screen and (max-width:375px) {
+                padding-top: 10px;
+            }
 
-                @media screen and (max-width:375px) {
-                    font-size: 12px;
+            &-name {
+                display: flex;
+                flex-direction: column;
+
+                &-item {
+                    color: #FFF;
+                    font-family: $second-font;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 135%;
+
+                    @media screen and (max-width:375px) {
+                        font-size: 12px;
+                    }
                 }
             }
-        }
 
-        &-desc {
-            display: flex;
-            flex-direction: column;
+            &-desc {
+                display: flex;
+                flex-direction: column;
 
-            &-item {
-                color: #FFF;
-                font-family: $second-font;
-                font-size: 24px;
-                font-style: normal;
-                font-weight: 300;
-                line-height: 135%;
+                &-item {
+                    color: #FFF;
+                    font-family: $second-font;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 135%;
 
-                @media screen and (max-width:375px) {
-                    font-size: 10px;
+                    @media screen and (max-width:375px) {
+                        font-size: 10px;
+                    }
                 }
             }
         }
     }
-}}
-
-
+}

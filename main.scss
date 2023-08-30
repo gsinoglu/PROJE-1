@@ -713,6 +713,7 @@ body {
         &-image {
             width: 410px;
             height: 550px;
+            object-fit: cover;
 
             @media screen and (max-width:375px) {
                 width: 275px;

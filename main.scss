@@ -576,7 +576,8 @@ body {
 
                 @media screen and (max-width:375px) {
                     width: 350px;
-                    height: 275px;
+                    height: 300px;
+                    object-fit: cover;
                 }
             }
 
@@ -586,7 +587,8 @@ body {
 
                 @media screen and (max-width:375px) {
                     width: 350px;
-                    height: 275px;
+                    height: 300px;
+                    object-fit: cover;
                 }
             }
         }
@@ -625,7 +627,7 @@ body {
 
             @media screen and (max-width:375px) {
                 left: 35px;
-                top: 930px;
+                top: 950px;
                 font-size: 30px;
             }
         }
@@ -640,6 +642,7 @@ body {
             @media screen and (max-width:375px) {
                 width: 350px;
                 height: 300px;
+                object-fit: cover;
             }
         }
 
@@ -657,7 +660,7 @@ body {
 
             @media screen and (max-width:375px) {
                 left: 35px;
-                top: 1225px;
+                top: 1275px;
                 font-size: 30px;
             }
         }
